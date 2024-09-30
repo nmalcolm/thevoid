@@ -1,0 +1,91 @@
+# Swap environments
+s:stq:qa
+s:qa:prod
+s:prod:sandbox
+s:sandbox:dev
+s:prod:sandbox
+s:sandbox:ci
+s:qa:qa2
+s:qa:staging
+s:staging:prod
+s:prod:qa2
+s:sandbox:prod
+s:prod:staging
+
+# Swap common geographical locations
+s:chi:sav
+s:sav:chi
+s:chi:stc
+s:stc:sav
+
+# Replace components to create potential subdomain combinations
+s:disputes-panel:admin
+s:admin:login
+s:login:dashboard
+s:dashboard:monitor
+s:monitor:status
+
+# Add common prefixes
+^api-
+^dev-
+^qa-
+^staging-
+^prod-
+^sandbox-
+^ci-
+
+# Add common suffixes
+$-panel
+$-auth
+$-monitor
+$-status
+$-db
+$-backend
+
+# Replace standard domain components with common variants
+s:braintree:braintreeinternal
+s:braintree:btexternal
+s:braintree:braintree-public
+s:braintree:braintree-private
+
+# Delete specific terms (to create shorter variants)
+Dqa
+Dqa2
+Dprod
+Dsandbox
+Ddev
+
+# Append typical TLDs for DNSSEC zones
+$.com
+$.net
+$.org
+$.tools
+$.internal
+$.external
+$.corp
+
+# Add numbers to generate environment versions
+$1
+$2
+$3
+
+# Swap components for expanded variations
+s:graphite:grafana
+s:puppetdb:jenkins
+s:environmentalist:devtools
+s:tools:services
+s:services:api
+
+# Swap domain endings to test similar structures
+s:braintree.tools:braintree.com
+s:braintree.tools:braintree.net
+s:braintree.tools:braintree.org
+
+# Additional subdomain combinations based on observed patterns
+$-internal
+$-external
+$-services
+$-portal
+$-test
+$-demo
+$-prod
