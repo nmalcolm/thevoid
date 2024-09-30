@@ -34,53 +34,6 @@ s:monitor:status
 ^sandbox-
 ^ci-
 
-# Add common suffixes
-$-panel
-$-auth
-$-monitor
-$-status
-$-db
-$-backend
-
-# Replace standard domain components with common variants
-s:braintree:braintreeinternal
-s:braintree:btexternal
-s:braintree:braintree-public
-s:braintree:braintree-private
-
-# Delete specific terms (to create shorter variants)
-Dqa
-Dqa2
-Dprod
-Dsandbox
-Ddev
-
-# Append typical TLDs for DNSSEC zones
-$.com
-$.net
-$.org
-$.tools
-$.internal
-$.external
-$.corp
-
-# Add numbers to generate environment versions
-$1
-$2
-$3
-
-# Swap components for expanded variations
-s:graphite:grafana
-s:puppetdb:jenkins
-s:environmentalist:devtools
-s:tools:services
-s:services:api
-
-# Swap domain endings to test similar structures
-s:braintree.tools:braintree.com
-s:braintree.tools:braintree.net
-s:braintree.tools:braintree.org
-
 # Additional subdomain combinations based on observed patterns
 $-internal
 $-external
